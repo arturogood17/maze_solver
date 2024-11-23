@@ -15,21 +15,20 @@ class Maze:
         self._create_cells()
 
     def _create_cells(self):
-        self._cells = [[]]
         for i in range(self._nums_cols):
             col_cells= []
             for j in range(self._nums_rows):
                 col_cells.append(Cell(self._win))
             self._cells.append(col_cells)
-        for i in range (self._nums_cols):
+        for i in range(self._nums_cols):
             for j in range(self._nums_rows):
                 self._draw_cell(i, j)
 
     def _draw_cell(self, i, j):
         if self._win is None:
             return
-        x1 = self._x1 + (i * self._cell_size_x)
-        y1 = self._y1 + (j * self._cell_size_y)
+        x1 = self._x1 + i * self._cell_size_x
+        y1 = self._y1 + j * self._cell_size_y
 
         x2= x1 + self._cell_size_x
         y2= y1 + self._cell_size_y
