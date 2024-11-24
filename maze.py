@@ -64,7 +64,7 @@ class Maze:
                not_visited.append((i-1, j))
             if j > 0 and not self._cells[i][j-1]: #arriba
                 not_visited.append((i, j-1))
-            if j < self._nums_rows -1 and not self._cells[i][j+1]: #arriba
+            if j < self._nums_rows -1 and not self._cells[i][j+1]: #abajo
                 not_visited.append((i, j-1))
 
             if len(not_visited) == 0:
